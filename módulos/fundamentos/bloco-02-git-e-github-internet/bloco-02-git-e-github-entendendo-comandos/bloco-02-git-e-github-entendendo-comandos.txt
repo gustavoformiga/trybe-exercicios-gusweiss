@@ -1,0 +1,11 @@
+COMANDOS GIT
+git branch - lista as branches.
+git pull - puxa as mudanças do repositório remoto para o repositório local(pc).
+git add - adicionar alterações para fazer commit.
+git commit -m " " - grava as alterações.
+git push - envia as mudanças para a branch remota, manda pro repositório remoto.
+git merge - fusão de branchs.
+pull request- solicitação de merge para adicionar a branch no repositório principal.
+git fetch --prune - baixa atualizacao de branchs deletados no github
+git branch -d <NOMEDABRANCH>
+
