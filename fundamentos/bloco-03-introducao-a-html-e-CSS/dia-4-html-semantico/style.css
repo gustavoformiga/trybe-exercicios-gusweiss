@@ -1,4 +1,8 @@
 
+header {
+    text-align: center;
+}
+
 h1 {
     text-align: center;
     margin-left: auto;
@@ -59,4 +63,11 @@ h1 {
     height: 50px;
     text-align: center;
     width: 300px;
+  }
+
+  .divspremiacao {
+      margin-right: auto;
+      margin-left: auto;
+      width: 700px;
+      text-align: center;
   }
