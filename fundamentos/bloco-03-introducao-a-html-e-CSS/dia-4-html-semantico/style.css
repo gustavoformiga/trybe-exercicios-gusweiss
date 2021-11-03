@@ -1,0 +1,62 @@
+
+h1 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #podiumList {
+      list-style: none;
+  }
+
+  
+  
+  .firstplacepodium {
+      margin-right: auto;
+      margin-left: auto;
+      width: fit-content;
+  }
+
+  .secondAndThird {
+      width: fit-content;
+      margin-right: auto;
+      margin-left: auto;
+  }
+
+  .secondplacepodium {
+    width: fit-content;
+    display: inline-block;
+    text-align: center;
+    width: 300px;
+  }
+
+  .thirdplacepodium {
+    width: fit-content;
+    display: inline-block;
+    text-align: center;
+    width: 300px;
+  }
+
+  .first {
+    background-color: rgb(235, 200, 84);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 200px;
+  }
+
+  .second {
+    background-color: rgb(219, 219, 219);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 300px;
+  }
+
+  .third {
+    background-color: rgb(170, 142, 106);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 300px;
+  }
