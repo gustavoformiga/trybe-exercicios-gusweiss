@@ -71,3 +71,32 @@ h1 {
       width: 700px;
       text-align: center;
   }
+
+  .PrizeList {
+      margin-left: auto;
+      margin-right: auto;
+      list-style: none;
+      width: 800px;
+  }
+
+  .firstprize1, .firstprize2 {
+      width: fit-content;
+      display: inline-block;
+  }
+
+  .secondprize1, .secondprize2 {
+    width: fit-content;
+    display: inline-block;
+}
+
+.thirdprize1, .thirdprize2 {
+    width: fit-content;
+    display: inline-block;
+}
+
+.testedivsprize {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
