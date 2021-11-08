@@ -50,3 +50,16 @@ if (numero > 0) {
 } else {
     console.log("negative");
 }
+
+//parte5-angulosTriangulo
+const anguloa = -50;
+const angulob = 110;
+const anguloc = 20;
+if (anguloa < 0 || angulob < 0 || anguloc < 0) {
+    console.log("Erro: algum ângulo inválido, ou seja, menor que 0.");
+}
+if (anguloa + angulob + anguloc === 180) {
+    console.log("true");
+} else if (anguloa + angulob + anguloc > 180 || anguloa + angulob + anguloc < 180) {
+    console.log("false");
+} 
