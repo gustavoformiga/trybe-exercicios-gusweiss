@@ -115,3 +115,13 @@ if (numberOne % 2 === 0 || numberTwo % 2 === 0 || numberThree % 2 === 0) {
     console.log("False");
 }
 
+//part9- Escreva um programa que defina três números em constantes e retorne true se pelo menos uma das três for ímpar. Caso contrário, ele retorna false .
+const numberOne = ;
+const numberTwo = ;
+const numberThree = ;
+if (numberOne % 2 !== 0 || numberTwo % 2 !== 0 || numberThree % 2 !== 0) {
+    console.log("True");
+} else {
+    console.log("False");
+}
+
