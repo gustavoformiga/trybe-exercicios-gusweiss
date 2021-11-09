@@ -125,3 +125,16 @@ if (numberOne % 2 !== 0 || numberTwo % 2 !== 0 || numberThree % 2 !== 0) {
     console.log("False");
 }
 
+//part10- Escreva um programa que se inicie com dois valores em duas constantes diferentes: o custo de um produto e seu valor de venda. A partir dos valores, calcule quanto de lucro (valor de venda descontado o custo do produto) a empresa terá ao vender mil desses produtos.
+const productCost = 5;
+const productPrice = 10;
+let units = 1000;
+let costWithTax = productCost * 1.20;
+let profit = productPrice - costWithTax;
+if (productCost >= 0 && productPrice >= 0) {
+    totalProfit = profit * units;
+    console.log(totalProfit);
+} else {
+    console.log("Warning: unacceptable values");
+}
+
