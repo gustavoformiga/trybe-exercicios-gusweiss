@@ -82,3 +82,26 @@ if (pieceName === "pawn") {
 } else {
     console.log("Warning: invalid pieceName");
 }
+
+// part7 - Escreva um programa que converte uma nota dada em porcentagem (de 0 a 100) em conceitos de A a F. Siga essas regras:
+let score = ;
+let newScore = 0;
+if (score >= 90) {
+    newScore = "A";
+    console.log(newScore);
+} else if (score >= 80) {
+    newScore = "B";
+    console.log(newScore);
+} else if (score >= 70) {
+    newScore = "C";
+    console.log(newScore);
+} else if (score >= 60) {
+    newScore = "D";
+    console.log(newScore);
+} else if (score >= 50) {
+    newScore = "E";
+    console.log(newScore);
+} else if (score < 0 || score > 100) {
+    console.log("Invalid score, closing the program");
+}
+
