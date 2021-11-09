@@ -63,3 +63,22 @@ if (anguloa + angulob + anguloc === 180) {
 } else if (anguloa + angulob + anguloc > 180 || anguloa + angulob + anguloc < 180) {
     console.log("false");
 } 
+
+// part6- Escreva um programa que receba o nome de uma peça de xadrez e retorne os movimentos que ela faz.
+// reference page for the movements of chess pieces "https://www.chess.com/terms/chess-pieces#king"
+let pieceName = "".toLowerCase();
+if (pieceName === "pawn") {
+    console.log("The pawn moves forward one or two squares")
+} else if (pieceName === "bishop") {
+    console.log("The bishop moves diagonally as many squares as it likes")
+} else if (pieceName === "knight") {
+    console.log("The knight moves in an L-shape")
+} else if (pieceName === "rook") {
+    console.log("The rook moves horizontally or vertically as many squares as it likes")
+} else if (pieceName === "queen") {
+    console.log("The queen moves diagonally or horizontally or vertically as many squares as it likes")
+} else if (pieceName === "king") {
+    console.log("The king moves diagonally or horizontally or vertically only one square at time")
+} else {
+    console.log("Warning: invalid pieceName");
+}
