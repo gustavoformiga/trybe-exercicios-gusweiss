@@ -17,5 +17,6 @@ leitor.livrosFavoritos[1] = {
   autor: 'JK Rowling',
   editor: 'Rocco',
 };
+console.log(leitor.nome, "tem 2 livros favoritos:", leitor.livrosFavoritos);
 
   
