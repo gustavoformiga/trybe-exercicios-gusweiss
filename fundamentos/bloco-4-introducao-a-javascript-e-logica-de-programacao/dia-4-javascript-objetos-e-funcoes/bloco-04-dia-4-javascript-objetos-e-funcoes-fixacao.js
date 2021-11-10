@@ -1,29 +1,80 @@
-/* let player = {
-name:'Marta',
-lastName: 'Silva',
-age: 34,
-medals: { golden: 2, silver: 3 },
-bestInTheWorld: [2006, 2007, 2008, 2009, 2010, 2018],
-};
-console.log("A jogadora" + " " + "possui:" + " " + player.medals.golden + " " + "medalhas de ouro e" + " " + player.medals.silver + " " + "medalhas de prata.")
- */
+// REFATORAÇÃO DOO BLOCO-04-4.1- 5 PRIMEIROS EXERCICIOS
+/* Faça cinco programas, um para cada operação aritmética básica. Seu programa deve ter duas constantes, a e b , definidas no começo com os valores que serão operados. Faça programas para:
+Adição (a + b)
+Subtração (a - b)
+Multiplicação (a * b)
+Divisão (a / b)
+Módulo (a % b) */
 
-// part for of and for in
-/* let names = {
-person1: 'João',
-person2: 'Maria',
-person3: 'Jorge',
-}; 
-for (let index in names) {
-  console.log("Olá" + " " + names[index]);
-} */
-
-// part2 for of and for in
-let car = {
-model: 'A3 Sedan',
-manufacturer: 'Audi',
-year: 2020
+// Adição
+function sum(a, b) {
+  let result = a + b;
+  return result;
 };
-for (let index in car) {
-  console.log(index + ":" + " " + car[index])
+
+// Subtração
+function subtraction(a, b) {
+  let result = a - b;
+  return result;
+};
+
+// Multi
+function multi(a, b) {
+  let result = a * b;
+  return result;
+};
+
+// Divisão
+function division(a, b) {
+  let result = a / b;
+  return result;
+};
+
+// Módulo
+function module(a, b) {
+  let result = a % b;
+  return result;
+};
+
+// Faça um programa que retorne o maior de dois números. Defina no começo do programa duas constantes com os valores que serão comparados.
+function  greater(x = 20, y = 30) {
+  if (x > y) {
+    console.log(x,"é maior")
+} else {
+    console.log(y, "é maior");
+}
+};
+
+// Faça um programa que retorne o maior de três números. Defina no começo do programa três constantes com os valores que serão comparados.
+function greaterAmongThree(c = 10, d = 20, e = 5) {
+  if (c > d && c > e) {
+    console.log(c, "é o maior número");
+} else if (d > c && d > e) {
+    console.log(d, "é o maior número");
+} else {
+    console.log(e, "é o maior número");
+}
+}
+
+// Faça um programa que, dado um valor definido numa constante, retorne "positive" se esse valor for positivo, "negative" se for negativo e "zero" caso contrário.
+function positiveOrNegative(numero = -10) {
+  if (numero > 0) {
+    console.log("positive");
+} else if (numero === 0) {
+    console.log("zero");
+} else {
+    console.log("negative");
+}
+}
+
+// Faça um programa que defina três constantes com os valores dos três ângulos internos de um triângulo. Retorne true se os ângulos representarem os ângulos de um triângulo e false , caso contrário. Se algum ângulo for inválido o programa deve retornar uma mensagem de erro.
+function IsItTriangle(anguloa = -50, angulob = 110, anguloc = 20) {
+if (anguloa < 0 || angulob < 0 || anguloc < 0) {
+  console.log("Erro: algum ângulo inválido, ou seja, menor que 0.");
+}
+if (anguloa + angulob + anguloc === 180) {
+  console.log("true");
+} else if (anguloa + angulob + anguloc > 180 || anguloa + angulob + anguloc < 180) {
+  console.log("false");
+} 
 }
