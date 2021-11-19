@@ -12,10 +12,14 @@ console.log(document.getElementById("elementoOndeVoceEsta").firstElementChild.in
 console.log(document.querySelector('#pai').firstElementChild); 
 
 //5-Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta .
-console.log(document.querySelector('#elementoOndeVoceEsta').parentElement);
+console.log(document.querySelector('#elementoOndeVoceEsta').previousElementSibling);
 
 //6-Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta .
 console.log(document.querySelector('#elementoOndeVoceEsta').nextSibling);
 
 //7-Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta .
-console.log(document.querySelector('#elementoOndeVoceEsta').childNodes);
+console.log(document.querySelector('#elementoOndeVoceEsta').nextElementSibling);
+
+// 8-Agora acesse o terceiroFilho a partir de pai .
+let pai = document.querySelector('#pai');
+let terceiroFilhoDoPai = pai.lastElementChild.previousElementSibling;
