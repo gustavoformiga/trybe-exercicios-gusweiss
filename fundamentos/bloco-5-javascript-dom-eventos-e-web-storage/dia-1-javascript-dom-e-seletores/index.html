@@ -65,16 +65,34 @@ function changingColorSquare() {
 changingColorSquare();
 
 //  Crie uma função que mude a cor do quadrado vermelho para branco.
-
+function changingColorOfMiddleSquare() {
+  let middleSquare = document.getElementsByClassName('center-content')[0];
+  middleSquare.style.backgroundColor = 'white';
+}
+changingColorOfMiddleSquare();
 
 //  Crie uma função que corrija o texto da tag <h1>.
-
+function fixingTextOfHeader() {
+  let headerContent = document.getElementsByClassName('title')[0];
+  headerContent.innerHTML = 'Exercício 5.1 - JavaScript';
+}
+fixingTextOfHeader();
 
 //  Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
-
+function changeTextUpper() {
+  let firstParagraph = document.getElementsByTagName('p')[0];
+  firstParagraph.innerHTML = firstParagraph.innerText.toUpperCase();
+}
+changeTextUpper();
 
 //  Crie uma função que exiba o conteúdo de todas as tags <p> no console.
-
+function showingContentOfP() {
+  let paragraphs = document.getElementsByTagName('p');
+  for (let index = 0; index <= paragraphs.length; index += 1) {
+    console.log(paragraphs[index].innerHTML);
+  } return paragraphs;
+}
+showingContentOfP();
 
     </script>
   </body>
