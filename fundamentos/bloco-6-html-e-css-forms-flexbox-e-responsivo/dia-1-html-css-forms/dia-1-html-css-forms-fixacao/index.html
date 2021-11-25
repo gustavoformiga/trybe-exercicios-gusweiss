@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bloco-6.1</title>
+</head>
+<body>
+  <h1>FORMULÁRIO DO BLOCO 6.1-FIXAÇÃO</h1>
+  <form action="" method="GET">
+    <label>Email: <input type="email" required autocomplete='off' name="email" placeholder="Digite seu email" autofocus ></label>
+    <label>Password: <input type="password" required name="senha" id="password"></label>
+    <input type="checkbox" name="remind" value="">Lembre-me!
+    <button>Entrar</button>
+    <br>
+    <br>
+    <label for="">Estado:
+      <select name='estado' id='input-estado'>
+        <option value="sp">São Paulo</option>
+        <option value="rj">Rio de Janeiro</option>
+        <option value="es">Espírito de Santo</option>
+        <option value="am">Amazonas</option>
+        <option value="sc">Santa Catarina</option>
+        <option value="pr">Paraná</option>
+      </select>
+    </label>
+    <br>
+    <h3>Qual sistema operacional você utiliza?</h3>
+    <label for="Windows">
+      <input type="radio" id="windows" name="system" value="win" checked >Windows
+    </label>
+    <label for="MacOs">
+      <input type="radio" id="macintosh" name="system" value="mac">MacOs
+    </label>
+    <label for="Linux">
+      <input type="radio" id="linux" name="system" value="lin">Linux
+    </label>
+    <br>
+    <p>Explique a sua preferência por este sistema:</p>
+    <textarea name="which-system" id="text-area-system" cols='40' rows='5'></textarea>
+  </form>
+</body>
+</html>
