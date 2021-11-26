@@ -17,9 +17,29 @@
       <label for="username">Nome: </label> 
       <input type="text" required name='name' id='username' placeholder='Digite seu nome'>
       <label for="e-mail">Email: </label>
-       <input type="email" required name='email' id='e-mail' placeholder='Digite seu email'>
+       <input type="email" required name='email' id='email' placeholder='Digite seu email'>
       <label for="user-cpf">CPF: </label> 
-      <input type="number" required name='cpf' id="user-cpf" placeholder='Digite seu cpf'>          >
+      <input type="number" required name='cpf' id="userCpf" placeholder='Digite seu cpf'>
+      <br>
+      <br>
+      <label for="endereco">Endereço: </label>
+      <input type="text" required name='address' id="endereco" placeholder='Digite seu endereço'>
+      <br>
+      <br>
+      <label for="city">Cidade: </label>
+      <input type="text" required name='city' id="city" placeholder='Digite sua cidade'>
+      <label for="input-estado">Estado: 
+      <select required name='estado' id='input-estado'>
+      </select>
+      </label>
+      <label for="">Tipo de moradia: </label>
+      <input type="radio" id="casa" name="moradia" value="house" checked>Casa
+      <input type="radio" id="apartamento" name="moradia" value="apartment">Apartamento
+    </fieldset>
+    <fieldset>
+      <legend>Dados profissionais</legend>
+
+    </fieldset>
   </main>
   <script src="script.js"></script>
 </body>
