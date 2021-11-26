@@ -15,19 +15,19 @@
     <fieldset>
       <legend>Dados pessoais:</legend>
       <label for="username">Nome: </label> 
-      <input type="text" required name='name' id='username' placeholder='Digite seu nome'>
+      <input type="text" required name='name' id='username' maxlength="40" placeholder='Digite seu nome'>
       <label for="e-mail">Email: </label>
-       <input type="email" required name='email' id='email' placeholder='Digite seu email'>
+       <input type="email" required name='email' id='email' maxlength="50" placeholder='Digite seu email'>
       <label for="user-cpf">CPF: </label> 
-      <input type="number" required name='cpf' id="userCpf" placeholder='Digite seu cpf'>
+      <input type="number" required name='cpf' id="userCpf" maxlength="11" placeholder='Digite seu cpf'>
       <br>
       <br>
       <label for="endereco">Endereço: </label>
-      <input type="text" required name='address' id="endereco" placeholder='Digite seu endereço'>
+      <input type="text" required name='address' id="endereco" maxlength="200" placeholder='Digite seu endereço'>
       <br>
       <br>
       <label for="city">Cidade: </label>
-      <input type="text" required name='city' id="city" placeholder='Digite sua cidade'>
+      <input type="text" required name='city' id="city" maxlength="28" placeholder='Digite sua cidade'>
       <label for="input-estado">Estado: 
       <select required name='estado' id='input-estado'>
       </select>
@@ -38,6 +38,9 @@
     </fieldset>
     <fieldset>
       <legend>Dados profissionais</legend>
+      <label for="textCurriculum" id="curriculum">Resumo do currículo</label>
+      <br>
+      <textarea required id="textCurriculum" name="textCurriculum" maxlength="1000" rows="5" cols="50" placeholder="Digite aqui"></textarea>
 
     </fieldset>
   </main>
