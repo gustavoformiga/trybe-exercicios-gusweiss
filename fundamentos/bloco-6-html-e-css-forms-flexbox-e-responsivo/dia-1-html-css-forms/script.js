@@ -6,5 +6,8 @@ const estados = ['Acre', 'Alagoas', 'Amapá', 'Amazonas', 'Bahia', 'Ceará', 'Di
     option = new Option(estado, estado.toLowerCase());
     selector.options[selector.options.length] = option;
   });
-  
+ 
+
+
+
 
