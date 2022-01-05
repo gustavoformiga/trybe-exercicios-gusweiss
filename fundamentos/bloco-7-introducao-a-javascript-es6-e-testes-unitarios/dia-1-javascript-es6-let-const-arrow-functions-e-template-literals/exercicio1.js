@@ -1,11 +1,13 @@
-// 2-Crie uma função que receba uma frase e retorne qual a maior palavra.
-const longestWord = (phrase) => {
-  let newLongestWord = phrase.split(' ');
-  let maxSize = 0;
-  for (let word of newLongestWord) {
-    if (word.length > maxSize) {
-    maxSize = word.length;
-    result = word;
-    }
-  } return result
-}
+/* // 3-Crie uma página que contenha:
+Um botão ao qual será associado um event listener ;
+Uma variável clickCount no arquivo JavaScript que acumule o número de clicks no botão;
+Um campo no HTML que vá atualizando a quantidade de clicks no botão conforme a variável clickCount é atualizada. */ 
+const textNumber = document.getElementById('divCounter');
+const btn = document.getElementById('clickButton');
+let clickCount = 0;
+function counter() {
+  textNumber.innerHTML =  clickCount + 1;
+};
+btn.addEventListener('click', counter);
+
+
