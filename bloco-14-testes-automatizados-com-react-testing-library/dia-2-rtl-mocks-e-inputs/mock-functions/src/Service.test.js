@@ -1,7 +1,7 @@
 const service = require('./Service');
 
-describe('testa a funcao randomNumberInt', () => {
-  it('teste se a função foi chamada e quantas vezes foi chamada', () => {
+describe('Testa a funcao randomNumberInt', () => {
+  it('Teste se a função foi chamada e quantas vezes foi chamada', () => {
     service.randomNumberInt = jest.fn();
     service.randomNumberInt();
     service.randomNumberInt();
@@ -9,7 +9,7 @@ describe('testa a funcao randomNumberInt', () => {
     expect(service.randomNumberInt).toHaveBeenCalledTimes(2);
   })
 
-  it('testa se a função retorna 10 como padrão', () => {
+  it('Testa se a função retorna 10 como padrão', () => {
     service.randomNumberInt = jest.fn().mockReturnValue(10);
     expect(service.randomNumberInt()).toBe(10);
   })
@@ -41,5 +41,49 @@ describe('Testando mock implementation em randomNumberInt com três parâmetros'
     expect(service.randomNumberInt).toHaveBeenCalled();
     expect(service.randomNumberInt).toBeCalledTimes(1);
     expect(service.randomNumberInt).toHaveBeenCalledWith(5);
+  })
+})
+
+// exercise4
+jest.mock('./Service');
+describe('Testando mockimplementation em funcoes', () => {
+  it('A função upperCase agora deve retornar a string em caixa baixa', () => {
+    service.upperCase.mockImplementationOnce((phrase) => phrase.toLowerCase());
+    expect(service.upperCase('GUStavo')).toBe('gustavo');
+    expect(service.upperCase).toHaveBeenCalled();
+    expect(service.upperCase).toBeCalledTimes(1);
+  })
+
+  it('A função firstLetter agora deve retornar a última letra de uma string', () => {
+    service.firstLetter.mockImplementationOnce((phrase) => phrase.charAt(phrase.length -1))
+    expect(service.firstLetter('GUStavo')).toBe('o');
+    expect(service.firstLetter).toHaveBeenCalled();
+    expect(service.firstLetter).toBeCalledTimes(1);
+  })
+
+  it('A função boundingStrings agora deve concatenar 3 strings passadas como parâmetros', () => {
+    service.boundingStrings.mockImplementationOnce((phrase1, phrase2, phrase3) => (`${phrase1} ${phrase2} ${phrase3}`));
+    expect(service.boundingStrings('gustavo', 'é um cara', 'amável')).toBe('gustavo é um cara amável');
+    expect(service.boundingStrings).toHaveBeenCalled();
+    expect(service.boundingStrings).toBeCalledTimes(1);
+  })
+
+  it('Restaure a implementação da primeira função e garanta que foi restaurada.', () => {
+    service.upperCase.mockRestore();
+    // service.upperCase('gustavo');
+    expect(service.upperCase('gustavo')).toBe('GUSTAVO')
+  })
+})
+
+// exercise 5
+describe('Simule uma requisição para dogApi', () => {
+  service.gettingFetchedDog = jest.fn();
+  afterEach(service.gettingFetchedDog.mockReset);
+  it('verifique se resolveu e teve como valor "request sucess".', async () => {
+    service.gettingFetchedDog.mockResolvedValue("request sucess")
+    service.gettingFetchedDog();
+    expect(service.gettingFetchedDog).toHaveBeenCalled();
+    expect(service.gettingFetchedDog).toHaveBeenCalledTimes(1);
+    await expect(service.gettingFetchedDog()).resolves.toBe("request sucess")
   })
 })
