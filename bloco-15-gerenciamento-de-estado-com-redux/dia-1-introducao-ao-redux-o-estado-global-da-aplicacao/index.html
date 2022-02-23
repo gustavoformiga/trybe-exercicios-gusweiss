@@ -55,7 +55,23 @@
           return state;
         }
       }
-      const store = createStore(reducer);
+      const store = Redux.createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+      const prevBtn = document.getElementById('previous');
+      prevBtn.addEventListener('click', () => {
+        store.dispatch({ type: 'PREVIOUS_COLOR'});
+      });
+      const nextBtn = document.getElementById('next');
+      nextBtn.addEventListener('click', () => {
+        store.dispatch({ type: 'NEXT_COLOR'})
+      });
+      store.subscribe(() => {
+      // recupera o estado atualizado de colors e index
+      const { colors, index } = store.getState();
+      // altera o innerHTML de 'p' com a cor atualizada
+      document.getElementById('value').innerHTML = colors[index];
+      // altera a cor de fundo de container com a cor atualizada
+      document.getElementById('container').style.backgroundColor = colors[index];
+    });
     </script>
   </body>
 </html>
