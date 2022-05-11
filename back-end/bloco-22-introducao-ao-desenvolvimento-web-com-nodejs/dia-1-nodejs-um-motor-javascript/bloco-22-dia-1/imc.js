@@ -2,15 +2,15 @@
 const readline = require('readline-sync');
 const peso = readline.questionFloat('Digite seu peso:');
 const altura = readline.questionFloat('Digite sua altura em cm:');
-const alturaMetros = altura/100;
-const imc = peso/(alturaMetros**2);
+const imc = peso/((altura/100)**2);
 
 function funcImc(peso, altura) {
-  console.log(`Perfil: ${peso}kg e ${alturaMetros/100}m`);
+  const alturaMetros = altura/100;
+  console.log(`Perfil: ${peso}kg e ${alturaMetros}m`);
   return `Seu imc é ${imc}`;
 }
 
-function situacao(funcImc) {
+function situacao(imc) {
   if(imc < 18.5) {
     console.log('Abaixo do peso');
   }
@@ -31,5 +31,5 @@ function situacao(funcImc) {
   }
 };
 
-console.log(funcImc(peso, altura), situacao(funcImc));
+console.log(funcImc(peso, altura), situacao(imc));
 // module.export = funcImc;
