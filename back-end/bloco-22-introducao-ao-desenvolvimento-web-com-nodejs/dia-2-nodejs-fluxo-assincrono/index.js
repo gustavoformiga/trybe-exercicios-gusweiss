@@ -1,17 +1,17 @@
-function ex(a, b, c) {
-  const promise = new Promise((resolve, reject) => {
-    if (typeof(a) !== 'number' || typeof(b) !== 'number' || typeof(c) !== 'number') {
-      reject(new Error('Informe apenas números'))
-    } else {
-      const resultado = ((a+b) * c);
-      if (resultado < 50) {
-        reject(new Error('valor muito baixo'));
-      }
-      resolve(resultado);
-    }
-  })
-  return promise;
-};
+// function ex(a, b, c) {
+//   const promise = new Promise((resolve, reject) => {
+//     if (typeof(a) !== 'number' || typeof(b) !== 'number' || typeof(c) !== 'number') {
+//       reject(new Error('Informe apenas números'))
+//     } else {
+//       const resultado = ((a+b) * c);
+//       if (resultado < 50) {
+//         reject(new Error('valor muito baixo'));
+//       }
+//       resolve(resultado);
+//     }
+//   })
+//   return promise;
+// };
 
 // console.log(ex(10,10,10));
 // console.log(ex(1,1,1));
@@ -20,10 +20,20 @@ function ex(a, b, c) {
 // Gere um número aleatório de 1 a 100 para cada parâmetro que a função recebe. Para gerar um número aleatório, utilize o seguinte trecho de código: Math.floor(Math.random() * 100 + 1).
 // Chame a função do exercício anterior, passando os três números aleatórios como parâmetros.
 // Utilize then e catch para manipular a Promise retornada pela função:
-function getRandom() {
-  return Math.floor(Math.random() * 100 + 1);
+// function getRandom() {
+//   return Math.floor(Math.random() * 100 + 1);
+// }
+// const randomNumbersArray = [getRandom(), getRandom(), getRandom()]
+// ex(...randomNumbersArray)
+//   .then(result => console.log(result))
+//   .catch(error => console.log(error.message));
+
+// exercise 4- Crie uma função que leia todos os dados do arquivo e imprima cada personagem no formato id - Nome. Por exemplo: 1 - Homer Simpson.
+const fs =  require('fs').promises;
+async function getByIDandName() {
+  const fileContent = await fs.readFile('./simpsons.json', 'utf8');
+  const simpsons = JSON.parse(fileContent);
+  const simpsonsById = simpsons.map((simpson) => `${simpson.id}-${simpson.name}`);
+  simpsonsById.forEach(simpson => console.log(simpson));
 }
-const randomNumbersArray = [getRandom(), getRandom(), getRandom()]
-ex(...randomNumbersArray)
-  .then(result => console.log(result))
-  .catch(error => console.log(error.message));
+getByIDandName();
